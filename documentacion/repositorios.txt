@@ -1,0 +1,51 @@
+PLATAFORMA DE MONITOREO INTELIGENTE - GRUPO CORDILLERA
+=======================================================
+Asignatura: Desarrollo Fullstack III (DSY1106)
+Autores: Janet Huaylla Huayllas - Bairo Pasten Codoceo
+Profesor: Roberto Andres Moreno Perez
+
+REPOSITORIOS DEL PROYECTO
+==========================
+
+1. FRONTEND
+   URL: https://github.com/janet0u0/frontend-cordillera
+   Descripcion: Dashboard React con selector de roles (Ejecutivo, 
+   Analista, Supervisor) que consume el BFF y muestra KPIs en 
+   tiempo real. Empaquetado como modulo NPM.
+
+2. BFF (Backend For Frontend)
+   URL: https://github.com/janet0u0/bff-cordillera
+   Descripcion: Capa de orquestacion que adapta las respuestas 
+   segun el rol del usuario. Implementa patron Factory Method y 
+   Circuit Breaker con Resilience4j.
+
+3. MS-USUARIOS (Microservicio 1)
+   URL: https://github.com/janet0u0/ms-usuarios
+   Descripcion: Microservicio de gestion de usuarios y seguridad. 
+   Administra autenticacion y control de acceso basado en roles 
+   (RBAC). Implementa patron Repository.
+
+4. MS-KPI (Microservicio 2)
+   URL: https://github.com/janet0u0/ms-kpi
+   Descripcion: Microservicio de gestion de indicadores KPI. 
+   Calcula metricas estrategicas de ventas, rentabilidad, 
+   inventario y logistica. Implementa patron Repository.
+
+5. MS-DATOS (Microservicio 3)
+   URL: https://github.com/janet0u0/ms-datos
+   Descripcion: Microservicio de gestion de datos organizacionales. 
+   Centraliza informacion de ventas desde POS y E-commerce. 
+   Implementa patron Repository.
+
+ESTRATEGIA DE BRANCHING
+========================
+Todos los repositorios implementan Git Flow:
+- main:     Codigo estable final
+- develop:  Integracion del equipo
+- feature/: Desarrollo de cada funcionalidad
+
+PATRONES DE DISENO IMPLEMENTADOS
+=================================
+- Repository Pattern: MS-Usuarios, MS-KPI, MS-Datos
+- Factory Method:     BFF (ReporteFactory)
+- Circuit Breaker:    BFF (MicroservicioClient)
